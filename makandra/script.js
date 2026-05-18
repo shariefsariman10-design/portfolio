@@ -1417,6 +1417,95 @@ document.addEventListener('click', (e) => {
   }
 });
 
+document.addEventListener('click', (e) => {
+  const target = e.target.closest('[data-action]');
+  if (!target) return;
+  const action = target.dataset.action;
+  const view = target.dataset.view;
+  const category = target.dataset.category;
+  const district = target.dataset.district;
+  const tab = target.dataset.tab;
+
+  switch (action) {
+    case 'show-view':
+      showView(view);
+      break;
+    case 'show-view-mobile':
+      showView(view);
+      toggleMobileMenu();
+      break;
+    case 'browse-category':
+      browseByCategory(category || '');
+      break;
+    case 'browse-district':
+      browseByDistrict(district || '');
+      break;
+    case 'show-favorites':
+      showFavorites();
+      break;
+    case 'show-favorites-toggle':
+      showFavorites();
+      toggleUserMenu();
+      break;
+    case 'show-favorites-mobile':
+      showFavorites();
+      toggleMobileMenu();
+      break;
+    case 'open-auth':
+      openAuthModal(tab || 'login');
+      break;
+    case 'open-auth-mobile':
+      openAuthModal(tab || 'login');
+      toggleMobileMenu();
+      break;
+    case 'toggle-user-menu':
+      toggleUserMenu();
+      break;
+    case 'toggle-mobile-menu':
+      toggleMobileMenu();
+      break;
+    case 'hero-search':
+      heroSearch();
+      break;
+    case 'show-dashboard':
+      showView('dashboard');
+      toggleUserMenu();
+      break;
+    case 'close-auth-overlay':
+      if (e.target === target) closeAuthModal(e);
+      break;
+    case 'close-auth':
+      closeAuthModal();
+      break;
+    case 'switch-auth':
+      switchAuthTab(tab || 'login');
+      break;
+    case 'handle-login':
+      handleLogin();
+      break;
+    case 'handle-signup':
+      handleSignup();
+      break;
+    case 'handle-provider-signup':
+      handleProviderSignup();
+      break;
+    case 'reset-filters':
+      resetFilters();
+      break;
+    case 'close-review-overlay':
+      if (e.target === target) closeReviewModal(e);
+      break;
+    case 'close-review':
+      closeReviewModal();
+      break;
+    case 'submit-review':
+      submitReview();
+      break;
+    default:
+      return;
+  }
+});
+
 /* ══════════════════════════════════════════
    HERO SEARCH — ENTER KEY
 ══════════════════════════════════════════ */

@@ -466,6 +466,14 @@ img { max-width: 100%; display: block; }
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
 }
+.bg-db2777 { background: #DB2777; }
+.bg-7c3aed { background: #7C3AED; }
+.bg-d97706 { background: #D97706; }
+.bg-b45309 { background: #B45309; }
+.bg-1b4332 { background: #1B4332; }
+.top10-inner { position: relative; z-index: 2; }
+.client-logo { height: 100px; width: auto; display: block; }
+.favorites-content { padding: 40px 0 80px; }
 .hc-info strong { display: block; font-size: 14px; color: var(--text); }
 .hc-info small { font-size: 12px; color: var(--text-muted); }
 .hc-score { margin-left: auto; font-size: 13px; font-weight: 600; color: var(--accent); white-space: nowrap; }
@@ -494,7 +502,7 @@ img { max-width: 100%; display: block; }
   position: relative;
   padding: 100px 0;
   overflow: hidden;
-  background-image: url('BACKGROUND.jpeg');
+  background-image: url('../img/background.jpeg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -583,18 +591,18 @@ img { max-width: 100%; display: block; }
 
 
 /* Specifieke afbeeldingen per categorie */
-.card-schilders { background-image: url('schilder.jpg'); }
-.card-elektriciens { background-image: url('elektriciens.jpg'); }
-.card-hoveniers { background-image: url('hoveniers.jpg'); }
-.card-bank-mattenreiniging { background-image: url('Mattenreiniging.jpg'); }
-.card-fotografie { background-image: url('fotografie.jpg'); }
-.card-video-animatie { background-image: url('video.jpg'); }
-.card-muziek-audio { background-image: url('muziek.jpg'); }
-.card-coaching-training { background-image: url('coaching.jpg'); }
-.card-schoonheid-wellness { background-image: url('schoonheid.jpg'); }
-.card-evenementen { background-image: url('evenementen.jpg'); }
-.card-grafisch-ontwerp { background-image: url('grafisch.jpg'); }
-.card-bouw-constructie { background-image: url('bouw.jpg'); }
+.card-schilders { background-image: url('../img/schilder.jpg'); }
+.card-elektriciens { background-image: url('../img/elektriciens.jpg'); }
+.card-hoveniers { background-image: url('../img/hoveniers.jpg'); }
+.card-bank-mattenreiniging { background-image: url('../img/mattenreiniging.jpg'); }
+.card-fotografie { background-image: url('../img/fotografie.jpg'); }
+.card-video-animatie { background-image: url('../img/video.jpg'); }
+.card-muziek-audio { background-image: url('../img/muziek.jpg'); }
+.card-coaching-training { background-image: url('../img/coaching.jpg'); }
+.card-schoonheid-wellness { background-image: url('../img/schoonheid.jpg'); }
+.card-evenementen { background-image: url('../img/evenementen.jpg'); }
+.card-grafisch-ontwerp { background-image: url('../img/grafisch.jpg'); }
+.card-bouw-constructie { background-image: url('../img/bouw.jpg'); }
 
 /* Overlay om tekst leesbaar te maken */
 .cat-card::before {

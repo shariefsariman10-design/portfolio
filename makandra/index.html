@@ -14,47 +14,46 @@
 <!-- ═══════════════════════════════════ NAVIGATION ═══════════════════════════════════ -->
 <nav id="navbar">
   <div class="nav-container">
-    <div class="nav-logo" onclick="showView('home')">
-      <img src="MKDRA.png" alt="MaKandra Logo" class="nav-logo-img" />
+    <div class="nav-logo" data-action="show-view" data-view="home">
+      <img src="../img/mkdra.png" alt="MaKandra Logo" class="nav-logo-img" />
     </div>
     <div class="nav-links">
-      <a class="nav-link" onclick="showView('browse')">Diensten</a>
-      <a class="nav-link" onclick="browseByCategory('')">Categorieën</a>
-      <a class="nav-link" onclick="showFavorites()"> Favorieten</a>
+      <a class="nav-link" data-action="show-view" data-view="browse">Diensten</a>
+      <a class="nav-link" data-action="browse-category" data-category="">Categorieën</a>
+      <a class="nav-link" data-action="show-favorites"> Favorieten</a>
     </div>
     <div class="nav-auth" id="nav-auth">
-      <button class="btn-ghost" onclick="openAuthModal('login')">Inloggen</button>
-      <button class="btn-secondary" onclick="openAuthModal('signup')">Aanmelden</button>
-      <button class="btn-accent" onclick="openAuthModal('provider')">Dienstverlener worden</button>
+      <button class="btn-ghost" data-action="open-auth" data-tab="login">Inloggen</button>
+      <button class="btn-secondary" data-action="open-auth" data-tab="signup">Aanmelden</button>
+      <button class="btn-accent" data-action="open-auth" data-tab="provider">Dienstverlener worden</button>
     </div>
     <div class="nav-user hidden" id="nav-user">
-      <div class="user-pill" onclick="toggleUserMenu()">
+      <div class="user-pill" data-action="toggle-user-menu">
         <div class="user-avatar-sm" id="nav-avatar">?</div>
         <span id="nav-username">Gebruiker</span>
         <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg>
       </div>
       <div class="user-dropdown hidden" id="user-dropdown">
-        <a onclick="showView('dashboard'); toggleUserMenu()">
+        <a data-action="show-dashboard">
           <span>👤</span> Mijn Dashboard
         </a>
-        <a onclick="showFavorites(); toggleUserMenu()">
+        <a data-action="show-favorites-toggle">
           <span>❤️</span> Favorieten
         </a>
         <div class="dropdown-divider"></div>
-        <a onclick="logout()" class="logout-link">
+        <a data-action="logout" class="logout-link">
           <span>🚪</span> Uitloggen
         </a>
       </div>
     </div>
-    <button class="nav-mobile-btn" onclick="toggleMobileMenu()">☰</button>
+    <button class="nav-mobile-btn" data-action="toggle-mobile-menu">☰</button>
   </div>
   <div class="mobile-menu hidden" id="mobile-menu">
-    <a onclick="showView('browse'); toggleMobileMenu()">Diensten</a>
-    <a onclick="showFavorites(); toggleMobileMenu()">❤️ Favorieten</a>
-    <a onclick="openAuthModal('login'); toggleMobileMenu()">Inloggen</a>
-    <a onclick="openAuthModal('signup'); toggleMobileMenu()">Aanmelden</a>
-    <a onclick="openAuthModal('provider'); toggleMobileMenu()" class="mobile-provider-btn">Dienstverlener worden</a>
-  </div>
+    <a data-action="show-view-mobile" data-view="browse">Diensten</a>
+    <a data-action="show-favorites-mobile">❤️ Favorieten</a>
+    <a data-action="open-auth-mobile" data-tab="login">Inloggen</a>
+    <a data-action="open-auth-mobile" data-tab="signup">Aanmelden</a>
+    <a data-action="open-auth-mobile" data-tab="provider" class="mobile-provider-btn">Dienstverlener worden</a>
 </nav>
 
 
@@ -101,7 +100,7 @@
               <option>Sipaliwini</option>
             </select>
           </div>
-          <button class="btn-search" onclick="heroSearch()">Zoeken</button>
+          <button class="btn-search" data-action="hero-search">Zoeken</button>
         </div>
 
         <div class="hero-stats">
@@ -127,7 +126,7 @@
           <!-- #1 Maria Brunings – Fotografie – score 100 -->
           <div class="hero-card hc-1">
             <div class="hc-rank">#1</div>
-            <div class="hc-avatar" style="background:#DB2777">MB</div>
+            <div class="hc-avatar bg-db2777">MB</div>
             <div class="hc-info">
               <strong>Maria B.</strong>
               <small>Fotografie</small>
@@ -137,7 +136,7 @@
           <!-- #2 Anjali Ramdjitan – Grafisch Ontwerp – score 98 -->
           <div class="hero-card hc-2">
             <div class="hc-rank">#2</div>
-            <div class="hc-avatar" style="background:#7C3AED">AR</div>
+            <div class="hc-avatar bg-7c3aed">AR</div>
             <div class="hc-info">
               <strong>Anjali R.</strong>
               <small>Grafisch Ontwerp</small>
@@ -147,7 +146,7 @@
           <!-- #3 Fatima Abdoelkarim – Coaching – score 97 -->
           <div class="hero-card hc-3">
             <div class="hc-rank">#3</div>
-            <div class="hc-avatar" style="background:#D97706">FA</div>
+            <div class="hc-avatar bg-d97706">FA</div>
             <div class="hc-info">
               <strong>Fatima A.</strong>
               <small>Coaching</small>
@@ -157,7 +156,7 @@
           <!-- #4 Jerome Fonkel – Elektriciens – score 96 -->
           <div class="hero-card hc-4">
             <div class="hc-rank">#4</div>
-            <div class="hc-avatar" style="background:#B45309">JF</div>
+            <div class="hc-avatar bg-b45309">JF</div>
             <div class="hc-info">
               <strong>Jerome F.</strong>
               <small>Elektricien</small>
@@ -167,7 +166,7 @@
           <!-- #5 Devraj Kalpoe – Schilders – score 95 -->
           <div class="hero-card hc-5">
             <div class="hc-rank">#5</div>
-            <div class="hc-avatar" style="background:#1B4332">DK</div>
+            <div class="hc-avatar bg-1b4332">DK</div>
             <div class="hc-info">
               <strong>Devraj K.</strong>
               <small>Schilder</small>
@@ -184,7 +183,7 @@
   <!-- TOP 10 PROVIDERS – with background image -->
   <section class="section top10-section">
     <div class="top10-bg-overlay"></div>
-    <div class="container" style="position:relative;z-index:2">
+    <div class="container top10-inner">
       <div class="section-head">
         <div class="section-eyebrow top-badge">🏆 TOP 10</div>
         <h2 class="section-title light">Beste <em>Dienstverleners</em></h2>
@@ -289,7 +288,7 @@
         <div class="cta-left">
           <h2>Bent u een dienstverlener?<br><em>Word vandaag lid</em></h2>
           <p>Bereik duizenden klanten in heel Suriname. Maak een gratis profiel aan en begin vandaag. Geen commissie, nooit.</p>
-          <button class="btn-cta-big" onclick="openAuthModal('provider')">
+          <button class="btn-cta-big" data-action="open-auth" data-tab="provider">
             Profiel aanmaken 
           </button>
         </div>
@@ -308,33 +307,33 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">
-            <img src="MKDRA.png" alt="MaKandra" style="height:100px;width:auto;" />
+            <img src="../img/mkdra.png" alt="MaKandra" class="client-logo" />
           </div>
           <p>MaKandra staat voor samenwerking en vooruitgang. Wij geloven in persoonlijke service en duurzame relaties, zodat elke klant zich gehoord en geholpen voelt.</p>
           <div class="footer-flag">🇸🇷 Trots gemaakt in Suriname</div>
         </div>
         <div class="footer-col">
           <h4>Diensten</h4>
-          <a onclick="browseByCategory('Schilders')">Schilders</a>
-          <a onclick="browseByCategory('Elektriciens')">Elektriciens</a>
-          <a onclick="browseByCategory('Hoveniers')">Hoveniers</a>
-          <a onclick="browseByCategory('Schoonmaak')">Schoonmaak</a>
-          <a onclick="browseByCategory('Overig')">Overig</a>
+          <a data-action="browse-category" data-category="Schilders">Schilders</a>
+          <a data-action="browse-category" data-category="Elektriciens">Elektriciens</a>
+          <a data-action="browse-category" data-category="Hoveniers">Hoveniers</a>
+          <a data-action="browse-category" data-category="Schoonmaak">Schoonmaak</a>
+          <a data-action="browse-category" data-category="Overig">Overig</a>
         </div>
         <div class="footer-col">
           <h4>Platform</h4>
-          <a onclick="showView('browse')">Alle dienstverleners</a>
-          <a onclick="openAuthModal('provider')">Dienstverlener worden</a>
-          <a onclick="openAuthModal('signup')">Account aanmaken</a>
-          <a onclick="showFavorites()">Mijn favorieten</a>
+          <a data-action="show-view" data-view="browse">Alle dienstverleners</a>
+          <a data-action="open-auth" data-tab="provider">Dienstverlener worden</a>
+          <a data-action="open-auth" data-tab="signup">Account aanmaken</a>
+          <a data-action="show-favorites">Mijn favorieten</a>
         </div>
         <div class="footer-col">
           <h4>Districten</h4>
-          <a onclick="browseByDistrict('Paramaribo')">Paramaribo</a>
-          <a onclick="browseByDistrict('Wanica')">Wanica</a>
-          <a onclick="browseByDistrict('Nickerie')">Nickerie</a>
-          <a onclick="browseByDistrict('Commewijne')">Commewijne</a>
-          <a onclick="browseByDistrict('Para')">Para</a>
+          <a data-action="browse-district" data-district="Paramaribo">Paramaribo</a>
+          <a data-action="browse-district" data-district="Wanica">Wanica</a>
+          <a data-action="browse-district" data-district="Nickerie">Nickerie</a>
+          <a data-action="browse-district" data-district="Commewijne">Commewijne</a>
+          <a data-action="browse-district" data-district="Para">Para</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -388,7 +387,7 @@
             <!-- Rendered by JS -->
           </div>
         </div>
-        <button class="btn-reset" onclick="resetFilters()">↺ Filters wissen</button>
+        <button class="btn-reset" data-action="reset-filters">↺ Filters wissen</button>
       </aside>
 
       <main class="browse-main">
@@ -402,7 +401,7 @@
           <div class="empty-icon">🔍</div>
           <h3>Geen resultaten</h3>
           <p>Probeer andere zoektermen of verwijder filters</p>
-          <button class="btn-primary" onclick="resetFilters()">Filters wissen</button>
+          <button class="btn-primary" data-action="reset-filters">Filters wissen</button>
         </div>
       </main>
     </div>
@@ -419,7 +418,7 @@
     </div>
   </div>
   <div class="container">
-    <div id="favorites-content" style="padding: 40px 0 80px;">
+    <div id="favorites-content" class="favorites-content">
       <!-- Rendered by JS -->
     </div>
   </div>
@@ -441,16 +440,16 @@
 
 
 <!-- ═══════════════════════════════════ AUTH MODAL ═══════════════════════════════════ -->
-<div id="auth-overlay" class="overlay hidden" onclick="closeAuthModal(event)">
+<div id="auth-overlay" class="overlay hidden" data-action="close-auth-overlay">
   <div class="modal" id="auth-modal">
-    <button class="modal-x" onclick="closeAuthModal()">
+    <button class="modal-x" data-action="close-auth">
       <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>
     </button>
 
     <div class="modal-tabs">
-      <button class="modal-tab active" id="tab-btn-login" onclick="switchAuthTab('login')">Inloggen</button>
-      <button class="modal-tab" id="tab-btn-signup" onclick="switchAuthTab('signup')">Aanmelden</button>
-      <button class="modal-tab tab-provider-btn" id="tab-btn-provider" onclick="switchAuthTab('provider')">Dienstverlener worden</button>
+      <button class="modal-tab active" id="tab-btn-login" data-action="switch-auth" data-tab="login">Inloggen</button>
+      <button class="modal-tab" id="tab-btn-signup" data-action="switch-auth" data-tab="signup">Aanmelden</button>
+      <button class="modal-tab tab-provider-btn" id="tab-btn-provider" data-action="switch-auth" data-tab="provider">Dienstverlener worden</button>
     </div>
 
     <!-- LOGIN -->
@@ -468,8 +467,8 @@
         <input type="password" id="login-password" placeholder="••••••••" />
       </div>
       <div class="form-error hidden" id="login-error"></div>
-      <button class="btn-primary btn-full" onclick="handleLogin()">Inloggen</button>
-      <p class="form-footer">Nog geen account? <a onclick="switchAuthTab('signup')">Aanmelden</a></p>
+      <button class="btn-primary btn-full" data-action="handle-login">Inloggen</button>
+      <p class="form-footer">Nog geen account? <a data-action="switch-auth" data-tab="signup">Aanmelden</a></p>
     </div>
 
     <!-- SIGNUP USER -->
@@ -507,8 +506,8 @@
         </select>
       </div>
       <div class="form-error hidden" id="signup-error"></div>
-      <button class="btn-primary btn-full" onclick="handleSignup()">Account aanmaken</button>
-      <p class="form-footer">Al een account? <a onclick="switchAuthTab('login')">Inloggen</a></p>
+      <button class="btn-primary btn-full" data-action="handle-signup">Account aanmaken</button>
+      <p class="form-footer">Al een account? <a data-action="switch-auth" data-tab="login">Inloggen</a></p>
     </div>
 
     <!-- SIGNUP PROVIDER -->
@@ -584,17 +583,17 @@
         <input type="text" id="pv-price" placeholder="bijv. SRD 150/uur of SRD 500/project" />
       </div>
       <div class="form-error hidden" id="provider-error"></div>
-      <button class="btn-primary btn-full" onclick="handleProviderSignup()">Profiel aanmaken</button>
-      <p class="form-footer">Al een account? <a onclick="switchAuthTab('login')">Inloggen</a></p>
+      <button class="btn-primary btn-full" data-action="handle-provider-signup">Profiel aanmaken</button>
+      <p class="form-footer">Al een account? <a data-action="switch-auth" data-tab="login">Inloggen</a></p>
     </div>
   </div>
 </div>
 
 
 <!-- ═══════════════════════════════════ REVIEW MODAL ═══════════════════════════════════ -->
-<div id="review-overlay" class="overlay hidden" onclick="closeReviewModal(event)">
+<div id="review-overlay" class="overlay hidden" data-action="close-review-overlay">
   <div class="modal" id="review-modal">
-    <button class="modal-x" onclick="closeReviewModal()">
+    <button class="modal-x" data-action="close-review">
       <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>
     </button>
     <div class="modal-body">
@@ -613,7 +612,7 @@
       </div>
       <input type="hidden" id="review-target-id" />
       <div class="form-error hidden" id="review-error"></div>
-      <button class="btn-primary btn-full" onclick="submitReview()">Beoordeling plaatsen</button>
+      <button class="btn-primary btn-full" data-action="submit-review">Beoordeling plaatsen</button>
     </div>
   </div>
 </div>
