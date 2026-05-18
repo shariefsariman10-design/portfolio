@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sharief Sariman | Portfolio</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a href="index.html" class="nav__logo">SS</a>
+        <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="index.html" class="nav__link nav__link--active">Home</a></li>
+          <li><a href="about.html" class="nav__link">Over</a></li>
+          <li><a href="work.html" class="nav__link">Werk</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__content">
+          <p class="hero__greeting">Hallo, ik ben</p>
+          <h1 class="hero__name">Sharief Sariman</h1>
+          <p class="hero__title">Full-stack ontwikkelaar &amp; ontwerper</p>
+          <p class="hero__subtitle">Ik bouw strakke en gebruiksvriendelijke digitale ervaringen.</p>
+          <div class="hero__actions">
+            <a href="work.html" class="btn btn--primary">Bekijk mijn werk</a>
+            <a href="contact.html" class="btn btn--secondary">Neem contact op</a>
+          </div>
+        </div>
+        <div class="hero__image">
+          <div class="hero__avatar">
+            <img src="img/profile.svg" alt="Sharief Sariman" />
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="container">
+          <h2 class="section-title">Over mij</h2>
+          <div class="about__grid">
+            <div class="about__text">
+              <p>Ik ben een gepassioneerde ontwikkelaar die graag dingen bouwt die online werken. Ik geef veel om schone code, een goede gebruikerservaring en sterk design.</p>
+              <p>Als ik niet aan het coderen ben, verken ik graag nieuwe technologieën, werk ik aan eigen projecten of lees ik een goed boek.</p>
+            </div>
+            <div class="about__skills">
+              <h3 class="about__skills-title">Vaardigheden</h3>
+              <ul class="skills-list">
+                <li class="skills-list__item">HTML &amp; CSS</li>
+                <li class="skills-list__item">JavaScript</li>
+                <li class="skills-list__item">React</li>
+                <li class="skills-list__item">Node.js</li>
+                <li class="skills-list__item">Python</li>
+                <li class="skills-list__item">Git &amp; GitHub</li>
+                <li class="skills-list__item">UI / UX Design</li>
+                <li class="skills-list__item">Responsive design</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured" id="featured">
+        <div class="container">
+          <h2 class="section-title">Uitgelichte projecten</h2>
+          <div class="featured__grid">
+            <article class="project-card">
+              <div class="project-card__image">
+                <img src="makandra/MKDRA.png" alt="MaKandra" />
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">MaKandra</h3>
+                <p class="project-card__description">Een lokale dienstengids voor Suriname, gebouwd met HTML, CSS en vanilla JavaScript.</p>
+                <div class="project-card__tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                </div>
+                <div class="project-card__links">
+                  <a href="makandra/index.html" class="btn btn--sm">Open project</a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="featured__cta">
+            <a href="work.html" class="btn btn--primary">Bekijk alle projecten</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p class="footer__text">&copy; 2026 Sharief Sariman. Alle rechten voorbehouden.</p>
+        <ul class="footer__social">
+          <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="footer__social-link">GitHub</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

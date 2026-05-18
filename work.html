@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Werk | Sharief Sariman</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/work.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a href="index.html" class="nav__logo">SS</a>
+        <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="about.html" class="nav__link">Over</a></li>
+          <li><a href="work.html" class="nav__link nav__link--active">Werk</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <h1 class="page-hero__title">Mijn projecten</h1>
+          <p class="page-hero__subtitle">Een overzicht van projecten die ik heb gebouwd en opgeleverd.</p>
+        </div>
+      </section>
+
+      <section class="work-section">
+        <div class="container">
+          <div class="work-filters" id="work-filters">
+            <button class="filter-btn filter-btn--active" data-filter="all">Alles</button>
+          </div>
+
+          <div class="work-grid" id="work-grid">
+            <article class="work-card" data-category="frontend">
+              <div class="work-card__image">
+                <img src="makandra/MKDRA.png" alt="MaKandra" />
+                <div class="work-card__overlay">
+                  <a href="makandra/index.html" class="work-card__live" target="_blank" rel="noopener noreferrer">Bekijk site</a>
+                  <a href="makandra/index.html" class="work-card__code" target="_blank" rel="noopener noreferrer">Broncode</a>
+                </div>
+              </div>
+              <div class="work-card__body">
+                <span class="work-card__category">Frontend</span>
+                <h2 class="work-card__title">MaKandra</h2>
+                <p class="work-card__description">Een lokale dienstengids voor Suriname, gebouwd met HTML, CSS en vanilla JavaScript.</p>
+                <ul class="work-card__tags">
+                  <li class="tag">HTML</li>
+                  <li class="tag">CSS</li>
+                  <li class="tag">JavaScript</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p class="footer__text">&copy; 2026 Sharief Sariman. Alle rechten voorbehouden.</p>
+        <ul class="footer__social">
+          <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="footer__social-link">GitHub</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/work.js"></script>
+  </body>
+</html>
