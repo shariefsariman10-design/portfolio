@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,700;9..144,900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/main.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -360,12 +361,12 @@
           <span class="sidebar-label">Naam van dienst</span>
           <div class="sidebar-search-wrap">
             <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-            <input type="text" id="browse-search" placeholder="Naam van dienst zoeken…" oninput="applyFilters()" />
+            <input type="text" id="browse-search" placeholder="Naam van dienst zoeken…" data-action="apply-filters" />
           </div>
         </div>
         <div class="sidebar-section">
           <span class="sidebar-label">District</span>
-          <select id="filter-district" onchange="applyFilters()">
+          <select id="filter-district" data-action="apply-filters">
             <option value="">Alle districten</option>
             <option>Paramaribo</option><option>Wanica</option><option>Nickerie</option>
             <option>Coronie</option><option>Saramacca</option><option>Commewijne</option>
@@ -375,7 +376,7 @@
         </div>
         <div class="sidebar-section">
           <span class="sidebar-label">Sorteren</span>
-          <select id="filter-sort" onchange="applyFilters()">
+          <select id="filter-sort" data-action="apply-filters">
             <option value="score">Beste score</option>
             <option value="reviews">Meeste beoordelingen</option>
             <option value="name">Naam A–Z</option>

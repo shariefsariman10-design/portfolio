@@ -1520,6 +1520,16 @@ document.addEventListener('keydown', (e) => {
    INIT
 ══════════════════════════════════════════ */
 
+document.addEventListener('input', (e) => {
+  const target = e.target.closest('[data-action="apply-filters"]');
+  if (target) applyFilters();
+});
+
+document.addEventListener('change', (e) => {
+  const target = e.target.closest('[data-action="apply-filters"]');
+  if (target) applyFilters();
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   renderCategoryCards();
   renderTopProviders();
